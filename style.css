@@ -1,0 +1,62 @@
+:root {
+  --diameter: 130px;
+  --gap: 242px;
+  --channel: calc((var(--gap) - var(--diameter)) / 2);
+}
+
+.column {
+  float: left;              
+}
+
+.spacer {
+  /* horiz space between dot cols */
+  width: var(--channel);
+  height: 100%;
+}
+
+.spacer_row {
+  /* vert space between dots in col = diameter + 2*(horiz spacer) */
+  height: var(--gap);
+  width: 100%;
+}
+
+.lower {
+  /* = (1/2)*spacer + daimeter */
+  margin-top: calc(var(--diameter) + var(--channel));
+}
+
+section {
+  /* circle diameter */
+  width: var(--diameter);
+  height: var(--diameter);
+  margin: 0;
+  background: white;
+  clear: both;
+  border-radius: 50%;
+}
+
+#wrapper {
+  /* wall width */
+  width: 1394px;
+  /* wall height */
+  height: 1211px;
+  /* frame edge width */
+  padding: 23px;
+  border: 1px solid black;
+  background-color: #ddd;
+  box-sizing: border-box;
+}
+
+#padder {
+  /* padding from frame edge */
+  padding: 47px;
+  height: 100%;
+  box-sizing: border-box;
+  clear: both;
+  border: 1px solid black;
+  background-color: deeppink;
+}
+
+#border {
+  border: 1px solid black;
+}
